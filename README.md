@@ -27,11 +27,11 @@ Based on the [scripts](https://github.com/huggingface/transformers/tree/main/exa
 
 ## Training with 19 fine-grained labels
 
-How to fine-tune the BERT with 19 labels see Jupyter Notebook [Train_BERT_on_19_labels.ipynb](https://github.com/elenanereiss/bert-for-german-legal-ner/blob/main/Train_BERT_on_19_labels.ipynb)
+How to fine-tune the BERT with 19 labels see Jupyter Notebook [Train_BERT_on_19_labels.ipynb](https://github.com/elenanereiss/bert-legal-ner/blob/main/Train_BERT_on_19_labels.ipynb)
 
 ## Training with 7 coarse-grained labels
 
-How to fine-tune the BERT with 7 labels see Jupyter Notebook [Train_BERT_on_7_labels.ipynb](https://github.com/elenanereiss/bert-for-german-legal-ner/blob/main/Train_BERT_on_7_labels.ipynb)
+How to fine-tune the BERT with 7 labels see Jupyter Notebook [Train_BERT_on_7_labels.ipynb](https://github.com/elenanereiss/bert-legal-ner/blob/main/Train_BERT_on_7_labels.ipynb)
 
 ## Run in terminal
 
@@ -48,3 +48,12 @@ Or you can execute `./coarse_run.sh BERT_MODEL` for training with coarse-grained
 ``` 
 
 Note that is a Pytorch version. With Tensorflow you have to change line 39 to `python3 run_tf_ner.py ...`. Make sure to run `chmod a+x fine_run.sh` to make your script executable.
+
+You can choose other models for training on 🤗 [huggingface](https://huggingface.co/models?language=de&pipeline_tag=fill-mask&sort=downloads), for example:
+BERT multilingual (bert-base-multilingual-cased, bert-base-multilingual-uncased)
+BERT German (bert-base-german-cased, dbmdz/bert-base-german-uncased, ...)
+DistilBERT (distilbert-base-german-cased, distilbert-base-multilingual-cased)
+XLM-RoBERTa (xlm-roberta-base, xlm-roberta-large, facebook/xlm-roberta-xl, ...)
+ELECTRA (stefan-it/electra-base-gc4-64k-200000-cased-generator, ...)
+DeBERTa (microsoft/mdeberta-v3-base)
+...
