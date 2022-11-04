@@ -50,10 +50,11 @@ Or you can execute `./coarse_run.sh BERT_MODEL` for training with coarse-grained
 Note that is a Pytorch version. With Tensorflow you have to change line 39 to `python3 run_tf_ner.py ...`. Make sure to run `chmod a+x fine_run.sh` to make your script executable.
 
 You can choose other models for training on 🤗 [huggingface](https://huggingface.co/models?language=de&pipeline_tag=fill-mask&sort=downloads), for example:
-BERT multilingual (bert-base-multilingual-cased, bert-base-multilingual-uncased)
-BERT German (bert-base-german-cased, dbmdz/bert-base-german-uncased, ...)
-DistilBERT (distilbert-base-german-cased, distilbert-base-multilingual-cased)
-XLM-RoBERTa (xlm-roberta-base, xlm-roberta-large, facebook/xlm-roberta-xl, ...)
-ELECTRA (stefan-it/electra-base-gc4-64k-200000-cased-generator, ...)
-DeBERTa (microsoft/mdeberta-v3-base)
-...
+
+- **BERT multilingual** (`bert-base-multilingual-cased`, `bert-base-multilingual-uncased`)
+- **BERT German** (`bert-base-german-cased`, `dbmdz/bert-base-german-uncased`, ...)
+- **DistilBERT** (`distilbert-base-german-cased`, `distilbert-base-multilingual-cased`)
+- **XLM-RoBERTa** (`xlm-roberta-base`, `xlm-roberta-large`, `facebook/xlm-roberta-xl`, ...)
+- **ELECTRA** (`stefan-it/electra-base-gc4-64k-200000-cased-generator`, ...)
+- **DeBERTa** (`microsoft/mdeberta-v3-base`)
+- ...
