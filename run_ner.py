@@ -274,7 +274,7 @@ def main():
 
         output_eval_file = os.path.join(training_args.output_dir, "eval_results.txt")
         if trainer.is_world_process_zero():
-            with open(output_eval_file, "w") as writer:
+            with open(output_eval_file, "w", encoding='utf-8') as writer:
                 logger.info("***** Eval results *****")
                 for key, value in result.items():
                     logger.info("  %s = %s", key, value)
@@ -300,7 +300,7 @@ def main():
 
         output_test_results_file = os.path.join(training_args.output_dir, "test_results.txt")
         if trainer.is_world_process_zero():
-            with open(output_test_results_file, "w") as writer:
+            with open(output_test_results_file, "w", encoding='utf-8') as writer:
                 for key, value in metrics.items():
                     logger.info("  %s = %s", key, value)
                     writer.write("%s = %s\n" % (key, value))
@@ -308,8 +308,8 @@ def main():
         # Save predictions
         output_test_predictions_file = os.path.join(training_args.output_dir, "test_predictions.txt")
         if trainer.is_world_process_zero():
-            with open(output_test_predictions_file, "w") as writer:
-                with open(os.path.join(data_args.data_dir, "test.txt"), "r") as f:
+            with open(output_test_predictions_file, "w", encoding='utf-8') as writer:
+                with open(os.path.join(data_args.data_dir, "test.txt"), "r", encoding='utf-8') as f:
                     token_classification_task.write_predictions_to_file(writer, f, preds_list)
 
     return results
